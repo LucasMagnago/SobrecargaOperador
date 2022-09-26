@@ -4,8 +4,8 @@ namespace SobrecargaOperador
 {
     class Ponto
     {
-        private int x { get; set; }
-        private int y { get; set; }
+        public int x { get; set; }
+        public int y { get; set; }
 
         public Ponto()
         {
@@ -40,28 +40,28 @@ namespace SobrecargaOperador
             pt.y = p1.y + p2.y;
 
             return pt;
-            
+
         }
-        class Program
+
+    }
+    class Program
+    {
+        static void Main()
         {
-            static void Main()
-            {
-                Ponto p = new Ponto();
-                Ponto pp = new Ponto(2, 6);
-                Ponto ppp = new Ponto(4, 4);
+            Ponto p = new Ponto();
+            Ponto pp = new Ponto(2, 6);
+            Ponto ppp = new Ponto(4, 4);
 
-                p = pp + ppp;
+            p = pp + ppp;
 
-                Console.WriteLine(p.x);
-                Console.WriteLine(p.y);
+            Console.WriteLine(p.x);
+            Console.WriteLine(p.y);
 
-                p = p++;
+            p = p++;
 
-                Console.WriteLine(p.x);
-                Console.WriteLine(p.y);
+            Console.WriteLine(p.x);
+            Console.WriteLine(p.y);
 
-            }
         }
-
     }
 }
